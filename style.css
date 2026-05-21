@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameCanvas {
+    border: 3px solid #4a90d9;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #0a1628 0%, #1a2a4a 100%);
+    box-shadow: 0 0 30px rgba(74, 144, 217, 0.3);
+}
+
+.ui {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.score {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.lives {
+    font-size: 24px;
+}
+
+.start-screen, .pause-screen, .game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.start-screen h1, .pause-screen h1, .game-over-screen h1 {
+    color: #4a90d9;
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(74, 144, 217, 0.8);
+}
+
+.start-screen .instructions {
+    color: #ff6b6b;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.start-screen p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.final-score {
+    color: #ffd700;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(74, 144, 217, 0.4);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(74, 144, 217, 0.6);
+}
+
+.hint {
+    color: #888;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.instructions-bottom {
+    color: #666;
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
